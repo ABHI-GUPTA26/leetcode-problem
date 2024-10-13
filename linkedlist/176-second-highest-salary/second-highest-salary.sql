@@ -7,7 +7,7 @@
 
 
 
-SELECT min(salary) as SecondHighestSalary
+SELECT max(salary) as SecondHighestSalary
 FROM (
     SELECT salary, DENSE_RANK() OVER (ORDER BY salary DESC) AS drnk
     FROM Employee
